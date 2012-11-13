@@ -8,4 +8,13 @@ class CreateBooks < ActiveRecord::Migration
       t.timestamps
     end
   end
+
+
+
+
+  def up
+    rename_column :table, :previous, :new_name
+  end
+
+
 end

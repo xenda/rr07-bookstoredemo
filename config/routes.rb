@@ -1,5 +1,24 @@
 Bookstore::Application.routes.draw do
-  resources :books, :path => "libros"
+
+  # Cada llamada a resources representa la creación 
+  # de diversas rutas y métodos como
+  #
+  #  GET     /authors         => authors#index   |  authors_path
+  #  GET     /authors/1       => authors#show    |  author_path(1)
+  #  GET     /authors/new     => authors#new     |  new_author_path
+  #  POST    /authors         => authors#create  |
+  #  GET     /authors/1/edit  => authors#edit    |  edit_author_path(1)
+  #  PUT     /authors/1       => authors#update  |
+  #  DELETE  /authors/1       => authors#destroy |
+
+  resources :authors
+
+  resources :rents
+
+  resources :users
+
+  resources :books
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
